@@ -11,17 +11,17 @@ use FacturaScripts\Core\Lib\ExtendedController\EditController;
  *
  * https://facturascripts.com/publicaciones/editcontroller-642
  */
-class EditIntervencion extends EditController
+class EditTipoIntervencion extends EditController
 {
     public function getModelClassName(): string
     {
-        return "Intervencion";
+        return "TipoIntervencion";
     }
 
     public function getPageData(): array
     {
         $pageData = parent::getPageData();
-        $pageData["title"] = "Intervención";
+        $pageData["title"] = "TipoIntervencion";
         $pageData["icon"] = "fas fa-business-time";
         return $pageData;
     }

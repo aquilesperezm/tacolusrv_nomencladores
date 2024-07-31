@@ -11,7 +11,7 @@
         <null>NO</null>
     </column>
     <constraint>
-        <name>intervenciones_pkey</name>
+        <name>tiposintervenciones_pkey</name>
         <type>PRIMARY KEY (id)</type>
     </constraint>
 </table>

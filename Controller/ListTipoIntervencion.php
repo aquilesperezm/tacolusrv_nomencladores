@@ -11,28 +11,28 @@ use FacturaScripts\Core\Lib\ExtendedController\ListController;
  *
  * https://facturascripts.com/publicaciones/listcontroller-232
  */
-class ListIntervencion extends ListController
+class ListTipoIntervencion extends ListController
 {
     public function getPageData(): array
     {
         $pageData = parent::getPageData();
+        $pageData["title"] = "Tipo de Intervenciones";
         $pageData["menu"] = "Nomencladores";
-        $pageData["title"] = "Intervenciones";
         $pageData["icon"] = "fas fa-business-time";
         return $pageData;
     }
 
     protected function createViews(): void
     {
-        $this->createViewsIntervencion();
+        $this->createViewsTipoIntervencion();
     }
 
-    protected function createViewsIntervencion(string $viewName = "ListIntervencion"): void
+    protected function createViewsTipoIntervencion(string $viewName = "ListTipoIntervencion"): void
     {
-        $this->addView($viewName, "Intervencion", "Interveciones");
+        $this->addView($viewName, "TipoIntervencion", "Tipo de Intervenciones");
         $this->addSearchFields($viewName, ['nombre']);
         $this->addOrderBy($viewName, ['nombre'],'nombre');
-        $this->listView($viewName)->addFilterAutocomplete('nombre', 'nombre', 'nombre', 'intervenciones');
+        $this->listView($viewName)->addFilterAutocomplete('nombre', 'nombre', 'nombre', 'tiposintervenciones');
         
         // Esto es un ejemplo ... debe de cambiarlo según los nombres de campos del modelo
         // $this->addOrderBy($viewName, ["id"], "id", 2);

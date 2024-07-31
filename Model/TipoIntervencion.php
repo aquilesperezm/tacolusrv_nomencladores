@@ -5,7 +5,7 @@ namespace FacturaScripts\Plugins\Nomencladores\Model;
 use FacturaScripts\Core\Model\Base\ModelClass;
 use FacturaScripts\Core\Model\Base\ModelTrait;
 use FacturaScripts\Core\Tools;
-class Intervencion extends ModelClass
+class TipoIntervencion extends ModelClass
 {
     use ModelTrait;
 
@@ -27,7 +27,7 @@ class Intervencion extends ModelClass
 
     public static function tableName(): string
     {
-        return "intervenciones";
+        return "tiposintervenciones";
     }
 
     public function test(): bool
