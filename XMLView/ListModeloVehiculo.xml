@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view>
+    <columns>
+        <column name="id" display="none" order="100">
+            <widget type="text" fieldname="id" readonly="true"/>
+        </column>
+       
+        <column name="marca" title="Marca" display="left" order="150">
+            <widget type="select" fieldname="id_marca" required="true">
+                 <values source="marcasvehiculos" fieldcode="id" fieldtitle="nombre_marca"/>
+            </widget>
+        </column>
+        
+        <column name="nombre_modelo" title="Modelo" display="left" order="120">
+            <widget type="text" fieldname="nombre_modelo" maxlength="30" required="true"/>
+        </column>
+    </columns>
+</view>

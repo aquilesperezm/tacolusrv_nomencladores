@@ -11,18 +11,18 @@ use FacturaScripts\Core\Lib\ExtendedController\EditController;
  *
  * https://facturascripts.com/publicaciones/editcontroller-642
  */
-class EditMarcaVehiculo extends EditController
+class EditModeloVehiculo extends EditController
 {
     public function getModelClassName(): string
     {
-        return "MarcaVehiculo";
+        return "ModeloVehiculo";
     }
 
     public function getPageData(): array
     {
         $pageData = parent::getPageData();
-        $pageData["title"] = "Marca de Vehículos";
-        $pageData["icon"] = "fas fa-car-side";
+        $pageData["title"] = "Modelos de Vehículos";
+        $pageData["icon"] = "fas fa-shipping-fast";
         return $pageData;
     }
 }

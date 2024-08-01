@@ -11,29 +11,34 @@ use FacturaScripts\Core\Lib\ExtendedController\ListController;
  *
  * https://facturascripts.com/publicaciones/listcontroller-232
  */
-class ListMarcaVehiculo extends ListController
+class ListModeloVehiculo extends ListController
 {
     public function getPageData(): array
     {
         $pageData = parent::getPageData();
-        $pageData["title"] = "Marcas de Vehículos";
+        $pageData["title"] = "Modelos de Vehículos";
         $pageData["menu"] = "Nomencladores";
-        $pageData["icon"] = "fas fa-car-side";
+        $pageData["icon"] = "fas fa-shipping-fast";
         return $pageData;
     }
 
     protected function createViews(): void
     {
-        $this->createViewsMarcaVehiculo();
+        $this->createViewsModeloVehiculo();
     }
 
-    protected function createViewsMarcaVehiculo(string $viewName = "ListMarcaVehiculo"): void
+    protected function createViewsModeloVehiculo(string $viewName = "ListModeloVehiculo"): void
     {
-        $this->addView($viewName, "MarcaVehiculo", "Marcas de Vehículos");
-        $this->addSearchFields($viewName, ['nombre_marca']);
-        $this->addOrderBy($viewName, ['nombre_marca'],'Marca del Vehiculo');
+        $this->addView($viewName, "ModeloVehiculo", "Modelos de Vehículos");
         
-        $this->addFilterAutocomplete($viewName, 'nombre_marca', 'nombre_marca', 'nombre_marca', 'marcasvehiculos', 'nombre_marca', 'nombre_marca');
+        $this->addSearchFields($viewName, ['nombre_modelo']);
+        
+        $this->addOrderBy($viewName, ['nombre_modelo'],'Modelo del Vehiculo');
+        
+        $this->addFilterAutocomplete($viewName, 'nombre_modelo', 'Modelo', 'nombre_modelo', 'modelosvehiculos', 'nombre_modelo', 'nombre_modelo');
+        // Security Issue: Show id of marca
+        $this->addFilterAutocomplete($viewName, 'id_marca', 'Marca', 'id_marca', 'marcasvehiculos', 'id', 'nombre_marca');
+    
 
         // Esto es un ejemplo ... debe de cambiarlo según los nombres de campos del modelo
         // $this->addOrderBy($viewName, ["id"], "id", 2);
