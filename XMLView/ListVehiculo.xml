@@ -4,16 +4,45 @@
         <column name="id" display="none" order="100">
             <widget type="text" fieldname="id" readonly="true"/>
         </column>
-        <column name="matricula" display="left" order="110">
+        <column name="matricula" display="left" title="Matricula" order="110">
             <widget type="text" fieldname="matricula" maxlength="20" required="true"/>
         </column>
-        <column name="num_chasis" display="left" order="120">
+        <column name="num_chasis" display="left" title="No. Chasis" order="120">
             <widget type="text" fieldname="num_chasis" maxlength="20" required="true"/>
         </column>
-        <column name="fecha_matriculacion" display="left" order="140">
+        <!-- foreing field autofill-->
+        <column name="centro_autorizado" title="Centro Autorizado" display="left" order="140">
+            <widget type="select" fieldname="id_centroautorizado" required="true">
+                 <values source="centrosautorizados" fieldcode="id" fieldtitle="nombre_centroautorizado"/>
+            </widget>
+        </column>
+        <column name="cliente" title="Cliente NIF/CIF " display="left" order="140">
+            <widget type="select" fieldname="id_cliente" required="true">
+                 <values source="clientes" fieldcode="codcliente" fieldtitle="cifnif"/>
+            </widget>
+        </column>
+        <!-- Seleccion dependiente: modelo depende de marca -->
+        <column name="marca" title="Marca" display="left" order="140">
+            <widget type="select" fieldname="id_marca" required="true">
+                 <values source="marcasvehiculos" fieldcode="id" fieldtitle="nombre_marca"/>
+            </widget>   
+        </column>
+        <column name="modelo" title="Modelo" display="left" order="140" >
+                <widget type="select" fieldname="id_modelo" parent="id_marca" required="true">
+                    <values source="modelosvehiculos" fieldcode="id" fieldtitle="nombre_modelo" fieldfilter="id_marca"/>
+                </widget>   
+        </column>
+        <!-- Seleccion dependiente: modelo depende de marca -->
+        <column name="categoria" title="Categoría" display="left" order="140" >
+                <widget type="select" fieldname="id_categoria" required="true">
+                    <values source="categoriasvehiculos" fieldcode="id" fieldtitle="nombre_categoria"/>
+                </widget>   
+        </column>
+        <!-- foreing field autofill-->
+        <column name="fecha_matriculacion" title="Fecha de Matricula" display="left" order="150">
             <widget type="date" fieldname="fecha_matriculacion" required="true"/>
         </column>
-        <column name="comentarios" display="left" order="130">
+        <column name="comentarios" title="Comentarios" display="left" order="160">
             <widget type="textarea" fieldname="comentarios"/>
         </column>
          

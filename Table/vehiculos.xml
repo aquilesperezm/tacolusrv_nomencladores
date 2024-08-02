@@ -24,8 +24,65 @@
         <type>character varying(20)</type>
         <null>NO</null>
     </column>
+    <column>
+        <name>id_centroautorizado</name>
+        <type>integer</type>
+        <null>NO</null>
+    </column>
+    <column>
+        <name>id_cliente</name>
+        <type>character varying(10)</type>
+        <null>NO</null>
+    </column>
+    <column>
+        <name>id_marca</name>
+        <type>integer</type>
+        <null>NO</null>
+    </column>
+    <column>
+        <name>id_modelo</name>
+        <type>integer</type>
+        <null>NO</null>
+    </column>
+    <column>
+        <name>id_categoria</name>
+        <type>integer</type>
+        <null>NO</null>
+    </column>
+
     <constraint>
         <name>vehiculos_pkey</name>
         <type>PRIMARY KEY (id)</type>
+    </constraint>
+
+    <!-- Llaves foraneas personalizadas 
+    CONSTRAINT `vehiculos_fk1` FOREIGN KEY (`id_centroautorizado`) REFERENCES `centrosautorizados` (`id`) ON UPDATE CASCADE,
+  CONSTRAINT `vehiculos_fk2` FOREIGN KEY (`id_cliente`) REFERENCES `clientes` (`codcliente`) ON UPDATE CASCADE,
+  CONSTRAINT `vehiculos_fk3` FOREIGN KEY (`id_modelo`) REFERENCES `modelosvehiculos` (`id`) ON UPDATE CASCADE,
+  CONSTRAINT `vehiculos_fk4` FOREIGN KEY (`id_categoria`) REFERENCES `categoriasvehiculos` (`id`) ON UPDATE CASCADE
+    -->
+    <constraint>
+        <name>vehiculos_fk1</name>
+        <type>FOREIGN KEY (id_centroautorizado) REFERENCES centrosautorizados (id) ON DELETE RESTRICT ON UPDATE CASCADE</type>
+    </constraint>
+
+    <constraint>
+        <name>vehiculos_fk2</name>
+        <type>FOREIGN KEY (id_cliente) REFERENCES clientes (codcliente) ON DELETE RESTRICT ON UPDATE CASCADE</type>
+    </constraint>
+
+    <constraint>
+        <name>vehiculos_fk3</name>
+        <type>FOREIGN KEY (id_modelo) REFERENCES modelosvehiculos (id) ON DELETE RESTRICT ON UPDATE CASCADE</type>
+    </constraint>
+
+    <constraint>
+        <name>vehiculos_fk4</name>
+        <type>FOREIGN KEY (id_categoria) REFERENCES categoriasvehiculos (id) ON DELETE RESTRICT ON UPDATE CASCADE</type>
+    </constraint>
+
+    <constraint>
+        <name>vehiculos_fk5</name>
+        <type>FOREIGN KEY (id_marca) REFERENCES marcasvehiculos (id) ON DELETE RESTRICT ON UPDATE CASCADE</type>
     </constraint>
 </table>

@@ -5,30 +5,19 @@ namespace FacturaScripts\Plugins\Nomencladores\Model;
 use FacturaScripts\Core\Model\Base\ModelClass;
 use FacturaScripts\Core\Model\Base\ModelTrait;
 use FacturaScripts\Core\Tools;
-class Vehiculo extends ModelClass
+class CentroAutorizado extends ModelClass
 {
     use ModelTrait;
 
     /** @var int */
-    public $id;    
-    
-    /** @var string */
-    public $matricula;
+    public $id;
 
     /** @var string */
-    public $num_chasis;
-
-    /** @var string */
-    public $fecha_matriculacion;
-
-    /** @var string */
-    public $comentarios;
-
+    public $nombre_centroautorizado;
 
     public function clear() 
     {
         parent::clear();
-        $this->fecha_matriculacion = date(self::DATE_STYLE);
     }
 
     public static function primaryColumn(): string
@@ -38,13 +27,11 @@ class Vehiculo extends ModelClass
 
     public static function tableName(): string
     {
-        return "vehiculos";
+        return "centrosautorizados";
     }
 
     public function test(): bool
     {
-        $this->comentarios = Tools::noHtml($this->comentarios);
-        $this->matricula = Tools::noHtml($this->matricula);
-        $this->num_chasis = Tools::noHtml($this->num_chasis);
+        $this->nombre_centroautorizado = Tools::noHtml($this->nombre_centroautorizado);
         return parent::test();
     }}
