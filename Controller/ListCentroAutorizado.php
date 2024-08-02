@@ -30,7 +30,12 @@ class ListCentroAutorizado extends ListController
     protected function createViewsCentroAutorizado(string $viewName = "ListCentroAutorizado"): void
     {
         $this->addView($viewName, "CentroAutorizado", "Centros Autorizados", "fas fa-user-tie");
+        $this->addSearchFields($viewName, ['nombre_centroautorizado']);
+        $this->addOrderBy($viewName, ['nombre_centroautorizado'],'Centros Autorizados');
         
+        $this->addFilterAutocomplete($viewName, 'nombre_centroautorizado', 'Nombre del Centro Autorizado',
+                 'nombre_centroautorizado', 'centrosautorizados', 'nombre_centroautorizado', 'nombre_centroautorizado');
+
         // Esto es un ejemplo ... debe de cambiarlo según los nombres de campos del modelo
         // $this->addOrderBy($viewName, ["id"], "id", 2);
         // $this->addOrderBy($viewName, ["name"], "name");

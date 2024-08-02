@@ -31,7 +31,12 @@ class ListCategoriaVehiculo extends ListController
     protected function createViewsCategoriaVehiculo(string $viewName = "ListCategoriaVehiculo"): void
     {
         $this->addView($viewName, "CategoriaVehiculo", "Categorías de Vehículos");
+        $this->addSearchFields($viewName, ['nombre_categoria']);
+        $this->addOrderBy($viewName, ['nombre_categoria'],'Categoría de Vehículos');
         
+        $this->addFilterAutocomplete($viewName, 'nombre_categoria', 'Nombre de Categoría',
+                 'nombre_categoria', 'categoriasvehiculos', 'nombre_categoria', 'nombre_categoria');
+
         // Esto es un ejemplo ... debe de cambiarlo según los nombres de campos del modelo
         // $this->addOrderBy($viewName, ["id"], "id", 2);
         // $this->addOrderBy($viewName, ["name"], "name");
