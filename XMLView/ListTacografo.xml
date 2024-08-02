@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view>
+    <columns>
+        <column name="id" display="none" order="100">
+            <widget type="text" fieldname="id" readonly="true"/>
+        </column>
+        <column name="modelo" title="Modelo" display="left" order="110">
+            <widget type="select" fieldname="id_modelo" required="true">
+                 <values source="modelostacografos" fieldcode="id" fieldtitle="modelo_tacografo"/>
+            </widget>   
+        </column>
+        <column name="categoria" title="Categoría" display="left" order="120">
+            <widget type="select" fieldname="id_categoria" required="true">
+                 <values source="categoriastacografos" fieldcode="id" fieldtitle="nombre_categoriatacografo"/>
+            </widget>   
+        </column>
+        <column name="fecha_fabricacion" title="Fecha de Fabricación" display="left" order="130">
+            <widget type="date" fieldname="fecha_fabricacion" required="true"/>
+        </column>
+        <column name="numero_serie" title="Número de Serie" display="left" order="100">
+            <widget type="text" fieldname="numero_serie" maxlength="50" required="true"/>
+        </column>
+
+    </columns>
+</view>

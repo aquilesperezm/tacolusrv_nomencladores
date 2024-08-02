@@ -20,6 +20,7 @@ class ListModeloVehiculo extends ListController
         $pageData["menu"] = "Nomencladores";
         $pageData["submenu"] = "Vehículos";
         $pageData["icon"] = "fas fa-shipping-fast";
+       
         return $pageData;
     }
 

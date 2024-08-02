@@ -11,32 +11,28 @@ use FacturaScripts\Core\Lib\ExtendedController\ListController;
  *
  * https://facturascripts.com/publicaciones/listcontroller-232
  */
-class ListTipoIntervencion extends ListController
+class ListTipoTacografo extends ListController
 {
     public function getPageData(): array
     {
         $pageData = parent::getPageData();
-        $pageData["title"] = "Tipo de Intervenciones";
+        $pageData["title"] = "Tipos de Tacógrafos";
         $pageData["menu"] = "Nomencladores";
-        $pageData["submenu"] = "Intervenciones";
-        $pageData["icon"] = "fas fa-business-time";
+        $pageData["submenu"] = "Tacógrafos";
+        $pageData["icon"] = "fas fa-bezier-curve";
         $pageData["ordernum"] = 1;
         return $pageData;
     }
 
     protected function createViews(): void
     {
-        $this->createViewsTipoIntervencion();
+        $this->createViewsTipoTacografo();
     }
 
-    protected function createViewsTipoIntervencion(string $viewName = "ListTipoIntervencion"): void
+    protected function createViewsTipoTacografo(string $viewName = "ListTipoTacografo"): void
     {
-        $this->addView($viewName, "TipoIntervencion", "Tipo de Intervenciones");
-        $this->addSearchFields($viewName, ['nombre']);
-        $this->addOrderBy($viewName, ['nombre'],'Tipo de Intervención');
+        $this->addView($viewName, "TipoTacografo", "Tipos de Tacógrafos","fas fa-bezier-curve");
         
-        $this->addFilterAutocomplete($viewName, 'nombre', 'nombre', 'nombre', 'tiposintervenciones', 'nombre', 'nombre');
-
         // Esto es un ejemplo ... debe de cambiarlo según los nombres de campos del modelo
         // $this->addOrderBy($viewName, ["id"], "id", 2);
         // $this->addOrderBy($viewName, ["name"], "name");

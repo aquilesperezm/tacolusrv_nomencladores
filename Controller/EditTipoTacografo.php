@@ -11,18 +11,18 @@ use FacturaScripts\Core\Lib\ExtendedController\EditController;
  *
  * https://facturascripts.com/publicaciones/editcontroller-642
  */
-class EditTipoIntervencion extends EditController
+class EditTipoTacografo extends EditController
 {
     public function getModelClassName(): string
     {
-        return "TipoIntervencion";
+        return "TipoTacografo";
     }
 
     public function getPageData(): array
     {
         $pageData = parent::getPageData();
-        $pageData["title"] = "Tipo de Intervención";
-        $pageData["icon"] = "fas fa-business-time";
+        $pageData["title"] = "Tipo de Tacógrafo";
+        $pageData["icon"] = "fas fa-bezier-curve";
         return $pageData;
     }
 }
