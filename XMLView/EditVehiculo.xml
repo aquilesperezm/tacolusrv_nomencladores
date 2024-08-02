@@ -34,7 +34,11 @@
                 </widget>   
             </column>
             <!-- Seleccion dependiente: modelo depende de marca -->
-
+            <column name="categoria" title="Categoría" display="left" order="140" >
+                <widget type="select" fieldname="id_categoria" required="true">
+                    <values source="categoriasvehiculos" fieldcode="id" fieldtitle="nombre_categoria"/>
+                </widget>   
+            </column>
             <!-- foreing field autofill-->
             <column name="fecha_matriculacion" title="Fecha de Matricula" display="left" order="150">
                 <widget type="date" fieldname="fecha_matriculacion" required="true"/>
