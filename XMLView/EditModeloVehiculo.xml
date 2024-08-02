@@ -6,13 +6,13 @@
                 <widget type="text" fieldname="id" readonly="true"/>
             </column>
             
-            <column name="marca" display="left" order="150">
+            <column name="marca" display="left" order="150" title="Marca">
             <widget type="select" fieldname="id_marca" required="true">
                  <values source="marcasvehiculos" fieldcode="id" fieldtitle="nombre_marca"/>
             </widget>
             </column>
             
-            <column name="nombre_modelo" display="left" order="120">
+            <column name="nombre_modelo" display="left" order="120" title="Modelo">
                 <widget type="text" fieldname="nombre_modelo" maxlength="30" required="true"/>
             </column>
         </group>
