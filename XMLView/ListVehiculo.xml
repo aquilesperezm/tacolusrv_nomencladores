@@ -33,11 +33,16 @@
                 </widget>   
         </column>
         <!-- Seleccion dependiente: modelo depende de marca -->
-        <column name="categoria" title="Categoría" display="left" order="140" >
-                <widget type="select" fieldname="id_categoria" required="true">
-                    <values source="categoriasvehiculos" fieldcode="id" fieldtitle="nombre_categoria"/>
-                </widget>   
+        
+        <!-- Static Selector of Tacograph Categories -->
+        <column name="id_categoria" title="Tipo de Tacógrafo" display="left" order="140">
+            <widget type="select" fieldname="id_categoria" translate="true" required="true">
+                <values title="Mercancía">1</values>
+                <values title="Viajeros">2</values>
+            </widget>
         </column>
+
+
         <!-- foreing field autofill-->
         <column name="fecha_matriculacion" title="Fecha de Matricula" display="left" order="150">
             <widget type="date" fieldname="fecha_matriculacion" required="true"/>

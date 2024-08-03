@@ -75,12 +75,13 @@
         <name>vehiculos_fk3</name>
         <type>FOREIGN KEY (id_modelo) REFERENCES modelosvehiculos (id) ON DELETE RESTRICT ON UPDATE CASCADE</type>
     </constraint>
-
+    <!--
     <constraint>
         <name>vehiculos_fk4</name>
         <type>FOREIGN KEY (id_categoria) REFERENCES categoriasvehiculos (id) ON DELETE RESTRICT ON UPDATE CASCADE</type>
     </constraint>
-
+    -->
+    
     <constraint>
         <name>vehiculos_fk5</name>
         <type>FOREIGN KEY (id_marca) REFERENCES marcasvehiculos (id) ON DELETE RESTRICT ON UPDATE CASCADE</type>
