@@ -36,7 +36,7 @@
             <!-- Seleccion dependiente: modelo depende de marca -->
            
             <!-- Static Selector of Tacograph Categories -->
-            <column name="id_categoria" title="Tipo de Tacógrafo" display="left" order="140">
+            <column name="id_categoria" title="Tipo de Vehículo" display="left" order="140">
                 <widget type="select" fieldname="id_categoria" translate="true" required="true">
                     <values title="Mercancía">1</values>
                     <values title="Viajeros">2</values>

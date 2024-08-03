@@ -20,6 +20,18 @@
         <column name="numero_serie" title="Número de Serie" display="left" order="100">
             <widget type="text" fieldname="numero_serie" maxlength="50" required="true"/>
         </column>
+         <!-- Static Selector of Tacograph Categories -->
+        <column name="escala_velocidad" title="Escala de Velocidad" display="left" order="140">
+            <widget type="select" fieldname="escala_velocidad" translate="true" required="true">
+                <values title="100 Km/h">100</values>
+                <values title="125 Km/h">125</values>
+                <values title="140 Km/h">140</values>
+                <values title="180 Km/h">180</values>
+           </widget>
+        </column>
+        <column name="homologacion" title="Homologación" display="left" order="160">
+            <widget type="textarea" fieldname="homologacion"/>
+        </column>
         </group>
     </columns>
 </view>

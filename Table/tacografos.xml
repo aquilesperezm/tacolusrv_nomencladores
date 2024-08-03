@@ -29,6 +29,18 @@
         <null>NO</null>
     </column>
 
+    <column>
+        <name>escala_velocidad</name>
+        <type>integer</type>
+        <null>NO</null>
+    </column>
+
+    <column>
+        <name>homologacion</name>
+        <type>text</type>
+        <null>NO</null>
+    </column>
+
     <constraint>
         <name>tacografos_pkey</name>
         <type>PRIMARY KEY (id)</type>
