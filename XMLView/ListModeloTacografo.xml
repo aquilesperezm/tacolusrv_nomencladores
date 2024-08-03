@@ -8,10 +8,18 @@
             <widget type="text" fieldname="modelo_tacografo" maxlength="50" required="true"/>
         </column>
         <!-- Llaves foraneas -->
-        <column name="tipo_tacografo" title="Tipo de Tacógrafo" display="left" order="140" >
+        <!-- <column name="tipo_tacografo" title="Tipo de Tacógrafo" display="left" order="140" >
                 <widget type="select" fieldname="id_tipotacografo" required="true">
                     <values source="tipostacografos" fieldcode="id" fieldtitle="nombre_tipotacografo"/>
                 </widget>   
+        </column> -->
+        <column name="id_tipotacografo" title="Tipo de Tacógrafo" display="left" order="140">
+            <widget type="select" fieldname="id_tipotacografo" translate="true" required="true">
+                <values title="Analógico">1</values>
+                <values title="Digital">2</values>
+                <values title="Inteligente">3</values>
+            </widget>
         </column>
+
     </columns>
 </view>

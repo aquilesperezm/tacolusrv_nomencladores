@@ -20,8 +20,10 @@
         <name>modelostacografos_pkey</name>
         <type>PRIMARY KEY (id)</type>
     </constraint>
+    <!--
     <constraint>
         <name>modelostacografos_fk1</name>
         <type>FOREIGN KEY (id_tipotacografo) REFERENCES clientes (tipostacografos) ON DELETE RESTRICT ON UPDATE CASCADE</type>
-    </constraint>
+    </constraint> -->
+    
 </table>
