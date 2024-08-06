@@ -6,8 +6,13 @@
         <null>NO</null>
     </column>
     <column>
-        <name>nombre_centroautorizado</name>
+        <name>codigo_centroautorizado</name>
         <type>character varying(30)</type>
+        <null>NO</null>
+    </column>
+    <column>
+        <name>nombre_centroautorizado</name>
+        <type>character varying(100)</type>
         <null>NO</null>
     </column>
     <constraint>
