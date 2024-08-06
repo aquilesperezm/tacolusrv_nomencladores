@@ -13,6 +13,10 @@ class CentroAutorizado extends ModelClass
     public $id;
 
     /** @var string */
+    public $codigo_centroautorizado;
+
+
+    /** @var string */
     public $nombre_centroautorizado;
 
     public function clear() 
