@@ -18,6 +18,22 @@ class Vehiculo extends ModelClass
     /** @var string */
     public $num_chasis;
 
+     /** @var int */
+     public $id_centroautorizado;  
+
+      /** @var int */
+      public $id_cliente;  
+    
+     /** @var int */
+    public $id_marca;  
+
+    /** @var int */
+    public $id_modelo;  
+
+    /** @var int */
+    public $id_categoria;  
+
+     
     /** @var string */
     public $fecha_matriculacion;
 

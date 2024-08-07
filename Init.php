@@ -2,7 +2,11 @@
 
 namespace FacturaScripts\Plugins\Nomencladores;
 
+use FacturaScripts\Core\Plugins;
 use FacturaScripts\Core\Template\InitClass;
+use mysqli;
+
+
 
 /**
  * Los plugins pueden contener un archivo Init.php en el que se definen procesos a ejecutar
@@ -12,18 +16,22 @@ use FacturaScripts\Core\Template\InitClass;
  */
 class Init extends InitClass
 {
+
     public function init(): void
     {
         // se ejecuta cada vez que carga FacturaScripts (si este plugin está activado).
+        //$this->restartData(true);
+
     }
 
     public function uninstall(): void
-        {
-            // se ejecuta cada vez que se desinstale el plugin. Primero desinstala y luego ejecuta el uninstall.
-        }
+    {
+        // se ejecuta cada vez que se desinstale el plugin. Primero desinstala y luego ejecuta el uninstall.
+    }
 
     public function update(): void
     {
         // se ejecuta cada vez que se instala o actualiza el plugin
+        
     }
 }

@@ -15,6 +15,9 @@ class ModeloTacografo extends ModelClass
     /** @var string */
     public $modelo_tacografo;
 
+    /** @var int */
+    public $id_tipotacografo;
+
     public function clear() 
     {
         parent::clear();
