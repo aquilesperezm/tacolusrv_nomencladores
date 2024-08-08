@@ -6,6 +6,15 @@ use FacturaScripts\Core\Plugins;
 use FacturaScripts\Core\Template\InitClass;
 use mysqli;
 
+use FacturaScripts\Plugins\Nomencladores\Model\CategoriaTacografo;
+use FacturaScripts\Plugins\Nomencladores\Model\CentroAutorizado;
+use FacturaScripts\Plugins\Nomencladores\Model\MarcaVehiculo;
+use FacturaScripts\Plugins\Nomencladores\Model\ModeloTacografo;
+use FacturaScripts\Plugins\Nomencladores\Model\ModeloVehiculo;
+use FacturaScripts\Plugins\Nomencladores\Model\Tacografo;
+use FacturaScripts\Plugins\Nomencladores\Model\TipoIntervencion;
+use FacturaScripts\Plugins\Nomencladores\Model\Vehiculo;
+
 
 
 /**
@@ -20,8 +29,16 @@ class Init extends InitClass
     public function init(): void
     {
         // se ejecuta cada vez que carga FacturaScripts (si este plugin está activado).
-        //$this->restartData(true);
-
+        //Instanciar modelos para crear tablas
+        $cat_tacografo = new CategoriaTacografo();
+        $centro_autorizo = new CentroAutorizado();
+        $marca_vehiculo = new MarcaVehiculo();
+        $modelo_tacografo = new ModeloTacografo();
+        $modelo_vehiculo = new ModeloVehiculo();
+        $tacografo = new Tacografo();
+        $tipo_intervencion = new TipoIntervencion();
+        $vehiculo = new Vehiculo();
+        
     }
 
     public function uninstall(): void

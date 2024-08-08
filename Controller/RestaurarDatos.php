@@ -58,7 +58,8 @@ class RestaurarDatos extends Controller
         if ($resp) {
 
 
-            $this->DeleteAndResetTable('ordenes_de_trabajo');
+            $this->DeleteAndResetTable('rel_tipodeintervencion_ordenesdetrabajo');
+            $this->DeleteAndResetTable('ordenesdetrabajo');
 
             $this->DeleteAndResetTable('vehiculos');
             $this->DeleteAndResetTable('modelosvehiculos');
