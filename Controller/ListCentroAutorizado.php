@@ -16,7 +16,7 @@ class ListCentroAutorizado extends ListController
     public function getPageData(): array
     {
         $pageData = parent::getPageData();
-        $pageData["title"] = "Centros Autorizados";
+        $pageData["title"] = "1. Centros Autorizados";
         $pageData["menu"] = "Nomencladores";
         $pageData["icon"] = "fas fa-user-tie";
         return $pageData;

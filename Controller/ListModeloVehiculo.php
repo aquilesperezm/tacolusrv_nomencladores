@@ -18,7 +18,7 @@ class ListModeloVehiculo extends ListController
         $pageData = parent::getPageData();
         $pageData["title"] = "Modelos de Vehículos";
         $pageData["menu"] = "Nomencladores";
-        $pageData["submenu"] = "Vehículos";
+        $pageData["submenu"] = "3. Vehículos";
         $pageData["icon"] = "fas fa-shipping-fast";
        
         return $pageData;

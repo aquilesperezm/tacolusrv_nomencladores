@@ -18,7 +18,7 @@ class ListTipoIntervencion extends ListController
         $pageData = parent::getPageData();
         $pageData["title"] = "Tipo de Intervenciones";
         $pageData["menu"] = "Nomencladores";
-        $pageData["submenu"] = "Intervenciones";
+        $pageData["submenu"] = "2. Intervenciones";
         $pageData["icon"] = "fas fa-business-time";
         $pageData["ordernum"] = 1;
         return $pageData;

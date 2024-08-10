@@ -18,7 +18,7 @@ class ListTacografo extends ListController
         $pageData = parent::getPageData();
         $pageData["title"] = "Tacógrafos";
         $pageData["menu"] = "Nomencladores";
-        $pageData["submenu"] = "Tacógrafos";
+        $pageData["submenu"] = "4. Tacógrafos";
         $pageData["icon"] = "fas fa-star";
         return $pageData;
     }
