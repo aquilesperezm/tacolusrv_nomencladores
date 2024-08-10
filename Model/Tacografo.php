@@ -31,6 +31,10 @@ class Tacografo extends ModelClass
 
      /** @var string */
     public $homologacion;
+
+     /** @var int */
+     public $id_vehiculo;
+
     
     public function clear()
     {

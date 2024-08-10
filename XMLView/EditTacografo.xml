@@ -9,7 +9,7 @@
                  <values source="modelostacografos" fieldcode="id" fieldtitle="modelo_tacografo"/>
             </widget>   
         </column>
-        <column name="categoria" title="Categoría" display="left" order="120">
+        <column name="categoria" title="Categoría"  display="left" order="120">
             <widget type="select" fieldname="id_categoria" required="true">
                  <values source="categoriastacografos" fieldcode="id" fieldtitle="nombre_categoriatacografo"/>
             </widget>   
@@ -17,11 +17,18 @@
         <column name="fecha_fabricacion" title="Fecha de Fabricación" display="left" order="130">
             <widget type="date" fieldname="fecha_fabricacion" required="true"/>
         </column>
-        <column name="numero_serie" title="Número de Serie" display="left" order="100">
+        <column name="numero_serie" title="Número de Serie" display="left" order="140">
             <widget type="text" fieldname="numero_serie" maxlength="50" required="true"/>
         </column>
+
+        <column name="id_vehiculo" title="Matricula" display="left" order="150">
+            <widget type="autocomplete" fieldname="id_vehiculo" required="true">
+                 <values source="vehiculos" fieldcode="id" fieldtitle="matricula"/>
+            </widget>
+        </column>
+
          <!-- Static Selector of Tacograph Categories -->
-        <column name="escala_velocidad" title="Escala de Velocidad" display="left" order="140">
+        <column name="escala_velocidad" title="Escala de Velocidad" display="left" order="160">
             <widget type="select" fieldname="escala_velocidad" translate="true" required="true">
                 <values title="100 Km/h">100</values>
                 <values title="125 Km/h">125</values>
@@ -29,7 +36,7 @@
                 <values title="180 Km/h">180</values>
            </widget>
         </column>
-        <column name="homologacion" title="Homologación" display="left" order="160">
+        <column name="homologacion" title="Homologación" display="left" order="170">
             <widget type="textarea" fieldname="homologacion"/>
         </column>
         </group>

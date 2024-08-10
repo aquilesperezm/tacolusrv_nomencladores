@@ -120,78 +120,6 @@ class RestaurarDatos extends Controller
             $ti = new TipoIntervencion(['nombre' => 'Verificación como Consecuencia de un Control de Carretera']);
             $ti->save();
 
-            //categoria de los tacografos
-            $ct = new CategoriaTacografo(['nombre_categoriatacografo' => 'TACOGRAFO DIGITAL (DESDE: 01-05-2016)']);
-            $ct->save();
-            $ct = new CategoriaTacografo(['nombre_categoriatacografo' => 'TACOGRAFO INTELIGENTE PRIMERA GENERACION (DESDE: 15-06-2019)']);
-            $ct->save();
-            $ct = new CategoriaTacografo(['nombre_categoriatacografo' => 'TACOGRAFO INTELIGENTE SEGUNDA GENERACION (DESDE: 21-08-2023)']);
-            $ct->save();
-
-            //modelos de los tacografos
-            $mt = new ModeloTacografo(['modelo_tacografo' => 'HTHA-12', 'id_tipotacografo' => '1']);
-            $mt->save();
-            $mt = new ModeloTacografo(['modelo_tacografo' => 'KJLII-762', 'id_tipotacografo' => '2']);
-            $mt->save();
-            $mt = new ModeloTacografo(['modelo_tacografo' => 'POL1J1-90', 'id_tipotacografo' => '3']);
-            $mt->save();
-            $mt = new ModeloTacografo(['modelo_tacografo' => 'TTQNZ-87', 'id_tipotacografo' => '3']);
-            $mt->save();
-            $mt = new ModeloTacografo(['modelo_tacografo' => 'LLMN1-YT', 'id_tipotacografo' => '2']);
-            $mt->save();
-
-            //tacografos
-            /* 100
-               125
-               140
-               180
-             * 
-             */
-            $t = new Tacografo([
-                'numero_serie' => 'JDFN-JMASD-1212-MK182-NSNA1',
-                'id_modelo' => 2,
-                'id_categoria' => 2,
-                'fecha_fabricacion' => '2024-05-01',
-                'escala_velocidad' => 100,
-                'homologacion' => 'Texto Ejemplo 1'
-            ]);
-            $t->save();
-            $t = new Tacografo([
-                'numero_serie' => 'TX9XD-98N7V-6WMQ6-BX7FG-H8Q99',
-                'id_modelo' => 3,
-                'id_categoria' => 3,
-                'fecha_fabricacion' => '2024-01-15',
-                'escala_velocidad' => 125,
-                'homologacion' => 'Texto Ejemplo 2'
-            ]);
-            $t->save();
-            $t = new Tacografo([
-                'numero_serie' => '7HNRX-D7KGG-3K4RQ-4WPJ4-YTDFH',
-                'id_modelo' => 5,
-                'id_categoria' => 1,
-                'fecha_fabricacion' => '2024-08-13',
-                'escala_velocidad' => 140,
-                'homologacion' => 'Texto Ejemplo 3'
-            ]);
-            $t->save();
-            $t = new Tacografo([
-                'numero_serie' => 'VK7JG-NPHTM-C97JM-9MPGT-3V66T',
-                'id_modelo' => 1,
-                'id_categoria' => 2,
-                'fecha_fabricacion' => '2024-03-24',
-                'escala_velocidad' => 180,
-                'homologacion' => 'Texto Ejemplo 4'
-            ]);
-            $t->save();
-            $t = new Tacografo([
-                'numero_serie' => 'NPPR9-FWDCX-D2C8J-H872K-2YT43',
-                'id_modelo' => 4,
-                'id_categoria' => 2,
-                'fecha_fabricacion' => '2024-05-17',
-                'escala_velocidad' => 125,
-                'homologacion' => 'Texto Ejemplo 4'
-            ]);
-            $t->save();
 
             //marcas de los vehiculos
             $ma = new MarcaVehiculo(['nombre_marca' => 'FORD']);
@@ -410,6 +338,85 @@ class RestaurarDatos extends Controller
                 'fecha_orden' => '2024-10-25'
             ]);
             $orden1->save();
+
+             //categoria de los tacografos
+             $ct = new CategoriaTacografo(['nombre_categoriatacografo' => 'TACOGRAFO DIGITAL (DESDE: 01-05-2016)']);
+             $ct->save();
+             $ct = new CategoriaTacografo(['nombre_categoriatacografo' => 'TACOGRAFO INTELIGENTE PRIMERA GENERACION (DESDE: 15-06-2019)']);
+             $ct->save();
+             $ct = new CategoriaTacografo(['nombre_categoriatacografo' => 'TACOGRAFO INTELIGENTE SEGUNDA GENERACION (DESDE: 21-08-2023)']);
+             $ct->save();
+ 
+             //modelos de los tacografos
+             $mt = new ModeloTacografo(['modelo_tacografo' => 'HTHA-12', 'id_tipotacografo' => '1']);
+             $mt->save();
+             $mt = new ModeloTacografo(['modelo_tacografo' => 'KJLII-762', 'id_tipotacografo' => '2']);
+             $mt->save();
+             $mt = new ModeloTacografo(['modelo_tacografo' => 'POL1J1-90', 'id_tipotacografo' => '3']);
+             $mt->save();
+             $mt = new ModeloTacografo(['modelo_tacografo' => 'TTQNZ-87', 'id_tipotacografo' => '3']);
+             $mt->save();
+             $mt = new ModeloTacografo(['modelo_tacografo' => 'LLMN1-YT', 'id_tipotacografo' => '2']);
+             $mt->save();
+ 
+             //tacografos
+             /* 100
+                125
+                140
+                180
+              * 
+              */
+             $t = new Tacografo([
+                 'numero_serie' => 'JDFN-JMASD-1212-MK182-NSNA1',
+                 'id_modelo' => 2,
+                 'id_categoria' => 2,
+                 'fecha_fabricacion' => '2024-05-01',
+                 'escala_velocidad' => 100,
+                 'homologacion' => 'Texto Ejemplo 1',
+                 'id_vehiculo'=>1
+             ]);
+             $t->save();
+             $t = new Tacografo([
+                 'numero_serie' => 'TX9XD-98N7V-6WMQ6-BX7FG-H8Q99',
+                 'id_modelo' => 3,
+                 'id_categoria' => 3,
+                 'fecha_fabricacion' => '2024-01-15',
+                 'escala_velocidad' => 125,
+                 'homologacion' => 'Texto Ejemplo 2',
+                 'id_vehiculo'=>2
+             ]);
+             $t->save();
+             $t = new Tacografo([
+                 'numero_serie' => '7HNRX-D7KGG-3K4RQ-4WPJ4-YTDFH',
+                 'id_modelo' => 5,
+                 'id_categoria' => 1,
+                 'fecha_fabricacion' => '2024-08-13',
+                 'escala_velocidad' => 140,
+                 'homologacion' => 'Texto Ejemplo 3',
+                 'id_vehiculo'=>3
+             ]);
+             $t->save();
+             $t = new Tacografo([
+                 'numero_serie' => 'VK7JG-NPHTM-C97JM-9MPGT-3V66T',
+                 'id_modelo' => 1,
+                 'id_categoria' => 2,
+                 'fecha_fabricacion' => '2024-03-24',
+                 'escala_velocidad' => 180,
+                 'homologacion' => 'Texto Ejemplo 4',
+                 'id_vehiculo'=>4
+             ]);
+             $t->save();
+             $t = new Tacografo([
+                 'numero_serie' => 'NPPR9-FWDCX-D2C8J-H872K-2YT43',
+                 'id_modelo' => 4,
+                 'id_categoria' => 2,
+                 'fecha_fabricacion' => '2024-05-17',
+                 'escala_velocidad' => 125,
+                 'homologacion' => 'Texto Ejemplo 4',
+                 'id_vehiculo'=>5
+             ]);
+             $t->save();
+
 
             for ($i = 0; $i < 60; $i++) {
                 //relacion orden de trabajo con los tipos de intervención
