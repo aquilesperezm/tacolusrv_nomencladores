@@ -18,7 +18,7 @@
                 </widget>
             </column>
              <column name="cliente" title="Cliente NIF/CIF " display="left" order="140">
-                 <widget type="select" fieldname="id_cliente" required="true">
+                 <widget type="autocomplete" fieldname="id_cliente" required="false">
                     <values source="clientes" fieldcode="codcliente" fieldtitle="cifnif"/>
                  </widget>
             </column>

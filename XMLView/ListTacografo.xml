@@ -20,7 +20,7 @@
         </column>
 
         <column name="id_vehiculo" title="Matricula" display="left" order="140">
-            <widget type="autocomplete" fieldname="id_vehiculo" required="true">
+            <widget type="autocomplete" fieldname="id_vehiculo" required="false">
                 <values source="vehiculos" fieldcode="id" fieldtitle="matricula"/>
             </widget>
         </column>

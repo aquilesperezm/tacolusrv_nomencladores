@@ -23,8 +23,7 @@
     </column>
     <column>
         <name>id_cliente</name>
-        <type>character varying(10)</type>
-        <null>NO</null>
+        <type>character varying(10)</type>  
     </column>
     <column>
         <name>id_marca</name>

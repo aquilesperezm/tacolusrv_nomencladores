@@ -28,7 +28,6 @@
     <column>
         <name>id_vehiculo</name>
         <type>integer</type>
-        <null>NO</null>
     </column>
 
 
