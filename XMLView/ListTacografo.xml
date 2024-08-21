@@ -37,19 +37,19 @@
 
 
       <column name="fecha_fabricacion" title="Fecha de Fabricación" display="left" order="160">
-            <widget type="date" fieldname="fecha_fabricacion" required="true"/>
+            <widget type="date" fieldname="fecha_fabricacion" />
         </column>
 
         <column name="fecha_instalacion" title="Fecha de Instalación" display="left" order="170">
-            <widget type="date" fieldname="fecha_instalacion" required="true"/>
+            <widget type="date" fieldname="fecha_instalacion" />
         </column>
 
         <column name="fecha_ultimarevision" title="Fecha de la última revisión" display="left" order="180">
-            <widget type="date" fieldname="fecha_ultima_revision" required="true"/>
+            <widget type="date" fieldname="fecha_ultima_revision" />
         </column>
 
          <column name="fecha_fin_garantia" title="Fecha del Fin de Garantía" display="left" order="190">
-            <widget type="date" fieldname="fecha_fin_garantia" required="true"/>
+            <widget type="date" fieldname="fecha_fin_garantia" />
         </column>
 
 

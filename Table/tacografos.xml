@@ -40,37 +40,37 @@
     <column>
         <name>homologacion</name>
         <type>text</type>
-        <null>NO</null>
+        
     </column>
 
     <column>
         <name>fecha_fabricacion</name>
         <type>date</type>
-        <null>NO</null>
+       
     </column>
 
     <column>
         <name>fecha_instalacion</name>
         <type>date</type>
-        <null>NO</null>
+       
     </column>
 
     <column>
         <name>fecha_ultima_revision</name>
         <type>date</type>
-        <null>NO</null>
+      
     </column>
 
     <column>
         <name>fecha_fin_garantia</name>
         <type>date</type>
-        <null>NO</null>
+       
     </column>
 
     <column>
         <name>comentarios</name>
         <type>text</type>
-        <null>NO</null>
+       
     </column>
 
     <constraint>
