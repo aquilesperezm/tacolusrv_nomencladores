@@ -33,10 +33,10 @@ class ListVehiculo extends ListController
         $this->addView($viewName, "Vehiculo", "Vehículos");
         
         // Esto es un ejemplo ... debe de cambiarlo según los nombres de campos del modelo
-        // $this->addOrderBy($viewName, ["id"], "id", 2);
-        // $this->addOrderBy($viewName, ["name"], "name");
+         $this->addOrderBy($viewName, ["matricula"], "matricula", 2);
+         $this->addOrderBy($viewName, ["num_chasis"], "No. de Chasis");
         
         // Esto es un ejemplo ... debe de cambiarlo según los nombres de campos del modelo
-        // $this->addSearchFields($viewName, ["id", "name"]);
+         $this->addSearchFields($viewName, ["matricula", "num_chasis"]);
     }
 }

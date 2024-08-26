@@ -33,10 +33,11 @@ class ListTacografo extends ListController
         $this->addView($viewName, "Tacografo", "Tacografos","fas fa-star");
         
         // Esto es un ejemplo ... debe de cambiarlo según los nombres de campos del modelo
-        // $this->addOrderBy($viewName, ["id"], "id", 2);
-        // $this->addOrderBy($viewName, ["name"], "name");
+        $this->addOrderBy($viewName, ["numero_serie"], "Número de Serie");
+        $this->addOrderBy($viewName, ["escala_velocidad"], "Escala de Velocidad");
+      //  $this->addOrderBy($viewName, ["modelo_tacografo"], "Modelo del Tacógrafo");
         
         // Esto es un ejemplo ... debe de cambiarlo según los nombres de campos del modelo
-        // $this->addSearchFields($viewName, ["id", "name"]);
+         $this->addSearchFields($viewName, ["numero_serie"]);
     }
 }
